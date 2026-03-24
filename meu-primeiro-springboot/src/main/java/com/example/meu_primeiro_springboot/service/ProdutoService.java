@@ -19,6 +19,7 @@ public class ProdutoService {
     }
 
     public Optional<Produto> buscarPorId(Long id){
+
         return produtoRepository.findById(id);
     }
 
@@ -27,6 +28,7 @@ public class ProdutoService {
     }
 
     public void deletarProduto(Long id){
+
         produtoRepository.deleteById(id);
     }
 
