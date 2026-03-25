@@ -33,7 +33,7 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public Produto criarProduto(@RequestBody Produto produto){
+    public Produto criarProduto(@RequestBody Produto produto){ //O Spring Recebe: A anotação @RequestBody lê esse texto JSON e "encaixa" os valores automaticamente dentro do objeto Produto no seu código Java.
         return produtoService.salvarProduto(produto);//o método salvarProduto de produtoService esta salvando o objeto produto inteiro vindo pelo parametro acima
     }
 
