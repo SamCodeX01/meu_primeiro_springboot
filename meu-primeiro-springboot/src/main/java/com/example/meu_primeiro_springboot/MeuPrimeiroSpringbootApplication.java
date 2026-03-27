@@ -11,6 +11,7 @@ public class MeuPrimeiroSpringbootApplication {
 		SpringApplication.run(MeuPrimeiroSpringbootApplication.class, args);
 
 		System.out.println("Hello World!");
+		System.out.println("DEU CERTOOOOOOOO!!!");
 	}
 
 }

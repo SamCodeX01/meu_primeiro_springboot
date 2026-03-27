@@ -3,10 +3,12 @@ package com.example.meu_primeiro_springboot.service;
 import com.example.meu_primeiro_springboot.exceptions.RecursoNaoEncontradoException;
 import com.example.meu_primeiro_springboot.model.Produto;
 import com.example.meu_primeiro_springboot.repository.ProdutoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ProdutoService {
     private final ProdutoRepository produtoRepository;
 
