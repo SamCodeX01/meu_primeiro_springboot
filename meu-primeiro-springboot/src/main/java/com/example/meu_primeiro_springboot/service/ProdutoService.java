@@ -24,7 +24,9 @@ public class ProdutoService {
     //public Optional<Produto> buscarPorId(Long id){
     public Produto buscarPorId(Long id){
 
-        return produtoRepository.findById(id).orElseThrow(()-> new RuntimeException("Produto com ID " + id + " não encontrado! "));
+        return produtoRepository.findById(id).orElseThrow(()->
+                new RuntimeException("Produto com ID " + id + " não encontrado! "));
+        //Obs: quando usar exceções, não pode usar o Optional<>
     }
 
     public Produto salvarProduto(Produto produto){
@@ -33,7 +35,7 @@ public class ProdutoService {
 
     public void deletarProduto(Long id){
 
-        if(!produtoRepository.existsById(id)){
+        if(!produtoRepository.existsById(id)){//se o id do produto não existe no repositório
             throw new RecursoNaoEncontradoException("Produto com ID " + id + "não encontrado!");
         }
         produtoRepository.deleteById(id);
